@@ -2,7 +2,7 @@ eventsApp.factory('eventData',function() {
   return {
     event: {
       name:"Angular Boot Camp",
-      date: "7/29/2016",
+      date: "8/01/2016",
       time: "10:11 am",
       location:{
         address: 'Google Headquarters',
