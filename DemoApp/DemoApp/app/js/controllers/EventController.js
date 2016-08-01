@@ -3,9 +3,9 @@ var ea = angular.module("eventsApp");
 ea.controller("EventController",
   function EventController($scope, eventData) {
 
-   $scope.events = eventData.event;
-  //  $scope.snippet = '<span style="color:red">Hi There</span>';
-  //  $scope.boolvalue = true;
+   eventData.getEvent(function(event) {
+     $scope.events = event; 
+   });
    $scope.sortorder = "name";
 
    $scope.upVoteSession = function(session) { session.upVoteCount++};
