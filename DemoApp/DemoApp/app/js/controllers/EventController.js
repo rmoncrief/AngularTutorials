@@ -1,7 +1,7 @@
 'use strict';
 var ea = angular.module("eventsApp");
 ea.controller("EventController",
-  function EventController($scope, eventData, $routeParams) {
+  function EventController($scope, eventData, $routeParams, $route) {
     $scope.sortorder = "name";
     $scope.events = eventData.getEvent($routeParams.eventId);
     // .$promise.then(
@@ -18,6 +18,9 @@ ea.controller("EventController",
     };
     $scope.downVoteSession = function(session) {
       session.downVoteCount--
+    };
+    $scope.reload = function() {
+      $route.reload();
     };
     // $scope.scrollToSession = function() {
     //   $anchorScroll();
