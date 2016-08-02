@@ -2,6 +2,6 @@
 
 eventsApp.controller('EventListController',
   function EventListController($scope, $location, eventData) {
-    debugger;
+    // debugger;
     $scope.events = eventData.getAllEvents();
   });
