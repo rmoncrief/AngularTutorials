@@ -5,20 +5,24 @@ var eventsApp = angular.module('eventsApp', ['ngResource', 'ngRoute'])
     $routeProvider.when('/newEvent', {
         templateUrl: 'templates/NewEvent.html',
         controller: 'EditEventController'
-      })
-      .when('/editProfile', {
+      });
+      $routeProvider.when('/editProfile', {
         templateUrl: 'templates/EditProfile.html',
         controller: 'EditProfileController'
-      })
-      .when('/events', {
+      });
+      $routeProvider.when('/events', {
         templateUrl: 'templates/EventList.html',
         controller: 'EventListController'
-      })
-      .when('/event/:eventId', {
+      });
+      $routeProvider.when('/event/:eventId', {
         templateUrl: 'templates/EventDetails.html',
         controller: 'EventController'
-      })
-      .otherwise({
+      });
+      $routeProvider.when('/sampleDirective', {
+        templateUrl: 'templates/SampleDirective.html',
+        controller: 'SampleDirectiveController'
+      });
+      $routeProvider.otherwise({
         redirectTo: '/events'
       });
       $locationProvider.html5Mode(true);
